@@ -7,3 +7,4 @@ def solution(phone_book):
             return False
 
     return True
+# TODO : hash로 풀어보기!
