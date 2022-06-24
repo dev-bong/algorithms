@@ -2,6 +2,7 @@ import math
 import itertools
 
 def is_prime(num): # 소수 판별 : sqrt(num) 이하의 수 중에서 약수 찾기
+    # TODO : 다른 소수 판별법 사용해보기
     if num in [0, 1]:
         return False
 
