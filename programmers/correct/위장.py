@@ -1,7 +1,7 @@
 def solution(clothes):
     cloth_type_table = {}
 
-    for cloth in clothes:
+    for cloth in clothes: # 이렇게 dictionary를 만드는 것이 hash 테이블을 이용하는 것임!
         if cloth[1] in cloth_type_table:
             cloth_type_table[cloth[1]] += 1
         else:
@@ -31,4 +31,3 @@ def solution(clothes):
     """
 
     return answer
-# TODO : hash로 풀어보기
