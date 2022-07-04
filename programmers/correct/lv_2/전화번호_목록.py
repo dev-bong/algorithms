@@ -8,7 +8,7 @@ def solution(phone_book):
 
     return True
 
-##### hash로 풀기 #####
+##### * hash로 풀기 #####
 class Hash():
     """
     hash 구조
