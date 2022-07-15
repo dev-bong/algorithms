@@ -33,3 +33,27 @@ def solution(n, computers):
         answer += 1
 
     return answer
+
+##### bfs 대신 다른 형태 함수 #####
+"""
+dfs, bfs 뭘써도 되는 문제
+dfs, bfs는 stack, queue 차이
+
+위 bfs함수는 visited 초기값이 [vertex]이고
+dfs 함수는 visited 초기값이 []이라서 visited에 append하는 타이밍이 다름
+근데 dfs함수 쪽이 좀더 직관성?이 있어보임
+"""
+def dfs(n, graph, vertex):
+    stack = [vertex]
+    visited = []
+
+    while stack:
+        v = stack.pop()
+
+        if v not in visited:
+            visited.append(v)
+            for i in range(n):
+                if graph[v][i] == 1:
+                    stack.append(i)
+    
+    return visited
