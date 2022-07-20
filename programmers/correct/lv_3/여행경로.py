@@ -56,3 +56,40 @@ def solution(tickets):
         search(tickets, "1,4,5,0,3,7", t_num, res)
 - 위 예시 처럼 동작하는 것을 수정
 """
+
+# TODO : DFS로 풀어보기 (아래는 전에 코드 짜다 만것)
+
+# def solution(tickets):
+#     routes = {}
+#     num_tickets = len(tickets)
+
+#     for tc in tickets:
+#         if tc[0] in routes:
+#             routes[tc[0]].append(tc[1])
+#         else:
+#             routes[tc[0]] = [tc[1]]
+
+#     for route in routes:
+#         routes[route].sort(reverse=True)
+#     print(routes)
+    
+#     stack = ["ICN"]
+#     visited = []
+#     ex_item = ""
+
+#     while stack:
+#         item = stack.pop()
+#         visited.append(item)
+        
+#         if item in routes:
+#             if routes[item]:
+#                 if routes[item][-1] in routes:
+#                     stack.append(routes[item].pop())
+#                 else:
+#                     pass
+#             else:
+#                 break
+#         else:
+#             pass
+
+#     return visited
